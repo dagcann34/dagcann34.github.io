@@ -3,10 +3,31 @@
   "appName": "Blokko",
   "webDir": "www",
   "backgroundColor": "#ff6fb5",
-  "ios": { "contentInset": "never", "scrollEnabled": false },
-  "android": { "allowMixedContent": false },
+  "ios": {
+    "contentInset": "never",
+    "scrollEnabled": false
+  },
+  "android": {
+    "allowMixedContent": false
+  },
   "plugins": {
-    "SplashScreen": { "launchShowDuration": 1200, "backgroundColor": "#ff6fb5", "showSpinner": false, "launchAutoHide": true },
-    "StatusBar": { "overlaysWebView": true, "style": "LIGHT" }
+    "SplashScreen": {
+      "launchShowDuration": 1200,
+      "backgroundColor": "#ff6fb5",
+      "showSpinner": false,
+      "launchAutoHide": true
+    },
+    "StatusBar": {
+      "overlaysWebView": true,
+      "style": "LIGHT"
+    },
+    "SocialLogin": {
+      "providers": {
+        "google": true,
+        "apple": true,
+        "facebook": false,
+        "twitter": false
+      }
+    }
   }
 }

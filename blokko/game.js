@@ -12,6 +12,23 @@ const STR = {
     how1:'Alttaki parçaları sürükleyip tahtaya bırak.', how2:'Bir satırı ya da sütunu tamamen doldur: patlasın!',
     how3:'Art arda patlatarak kombo yap, puanı katla.', how4:'Hiçbir parça sığmazsa oyun biter. Acele yok, süre yok!',
     gotIt:'Anladım!', combo:'Kombo', allClear:'Tertemiz!', goal:'Hedef', goalDone:'Hedef tamam! ⭐', dailyDone:'tamamlandı ⭐',
+    trophies:'Ödüller', badges:'Rozetler', stats:'İstatistik', ranks:'Sıralama', undo:'Geri al',
+    undoNone:'Bu oyunda geri alma hakkın bitti', rescueAd:'Reklam izle: Yeni Parçalar', undoAdQ:'Bir geri alma daha için kısa bir reklam izle?', watch:'📺 İzle', cancel:'Vazgeç',
+    adUnavailable:'Reklam şu an yok, bu bizden hediye! 🎁', adSkipped:'Ödül için reklamın sonuna kadar izlenmesi gerekiyor',
+    badgeUnlocked:'Yeni rozet', streakDays:'gün seri', locked:'Kilitli',
+    stGames:'Oynanan oyun', stBest:'En yüksek puan', stLines:'Patlatılan satır', stCombo:'En büyük kombo', stAvg:'Ortalama puan', stPieces:'Yerleştirilen parça', stClears:'Tertemiz tahta', stStreak:'En uzun günlük seri',
+    account:'Hesap', signInWhy:'İstersen giriş yap: rekorların ve rozetlerin buluta kaydedilsin, dünya sıralamasına gir. Giriş yapmadan da her şeyi oynayabilirsin.',
+    signApple:'Apple ile Giriş Yap', signGoogle:'Google ile Giriş Yap', nickname:'Takma ad', save:'Kaydet', signOut:'Çıkış Yap', deleteAcc:'Hesabımı Sil',
+    deleteConfirm:'Hesabın, bulut kaydın ve sıralama puanların kalıcı olarak silinecek. Cihazdaki oyun kaydın kalır. Emin misin?', deleteYes:'Evet, kalıcı olarak sil',
+    deleted:'Hesabın ve bulut verilerin silindi', signInFail:'Giriş yapılamadı. Tekrar dene.', nickSaved:'Takma ad kaydedildi', nickShort:'Takma ad en az 3 karakter olmalı',
+    legal:'Gizlilik ve Yasal', privacyPolicy:'Gizlilik Politikası', terms:'Kullanım Koşulları', adPrivacy:'Reklam gizlilik seçenekleri',
+    rkWeek:'Bu hafta', rkAll:'Tüm zamanlar', rkDaily:'Bugün', rkEmpty:'Henüz kimse yok. İlk sen ol!', rkLogin:'Sen de sıralamaya girmek için Ayarlar → Hesap bölümünden giriş yap.',
+    rkOffline:'Sıralama yüklenemedi. İnternet bağlantını kontrol et.', loading:'Yükleniyor…', synced:'Bulut kaydı eşitlendi ☁️',
+    ach:{first:['İlk Patlama','İlk satırını patlat'],multi2:['Çifte Patlama','Tek hamlede 2 çizgi patlat'],multi3:['Üçlü Şov','Tek hamlede 3 çizgi patlat'],
+      combo3:['Kombo Ustası','x3 kombo yap'],combo6:['Zincirleme','x6 kombo yap'],clean:['Tertemiz','Tahtayı tamamen boşalt'],
+      s1k:['Isınma Turu','Bir oyunda 1.000 puan'],s5k:['Blok Ustası','Bir oyunda 5.000 puan'],s10k:['Efsane','Bir oyunda 10.000 puan'],
+      g10:['Müdavim','10 oyun oyna'],l500:['Satır Avcısı','Toplam 500 çizgi patlat'],daily:['Günün Yıldızı','Günün bulmacasında hedefe ulaş'],
+      str3:['Ateşli Seri','3 gün üst üste günlük hedef'],str7:['Bir Haftalık Seri','7 gün üst üste günlük hedef']},
     praise:['Güzel!','Harika!','Süper!','Muhteşem!','İnanılmaz!','Efsane!'],
     months:['Oca','Şub','Mar','Nis','May','Haz','Tem','Ağu','Eyl','Eki','Kas','Ara'],
   },
@@ -23,6 +40,23 @@ const STR = {
     how1:'Drag the pieces below onto the board.', how2:'Fill a whole row or column to pop it!',
     how3:'Pop lines in a row for combos and multiply your score.', how4:'The game ends when no piece fits. No rush, no timer!',
     gotIt:'Got it!', combo:'Combo', allClear:'All Clear!', goal:'Goal', goalDone:'Goal reached! ⭐', dailyDone:'done ⭐',
+    trophies:'Trophies', badges:'Badges', stats:'Stats', ranks:'Ranking', undo:'Undo',
+    undoNone:'No undos left this game', rescueAd:'Watch ad: New Pieces', undoAdQ:'Watch a short ad for one more undo?', watch:'📺 Watch', cancel:'Cancel',
+    adUnavailable:'No ad right now, this one is on us! 🎁', adSkipped:'Watch the ad to the end to get the reward',
+    badgeUnlocked:'New badge', streakDays:'day streak', locked:'Locked',
+    stGames:'Games played', stBest:'Best score', stLines:'Lines popped', stCombo:'Biggest combo', stAvg:'Average score', stPieces:'Pieces placed', stClears:'All clears', stStreak:'Longest daily streak',
+    account:'Account', signInWhy:'Sign in if you like: your records and badges are saved to the cloud and you join the world ranking. Everything is playable without an account.',
+    signApple:'Sign in with Apple', signGoogle:'Sign in with Google', nickname:'Nickname', save:'Save', signOut:'Sign Out', deleteAcc:'Delete My Account',
+    deleteConfirm:'Your account, cloud save and ranking scores will be permanently deleted. Your on-device progress stays. Are you sure?', deleteYes:'Yes, delete permanently',
+    deleted:'Your account and cloud data were deleted', signInFail:'Could not sign in. Please try again.', nickSaved:'Nickname saved', nickShort:'Nickname needs at least 3 characters',
+    legal:'Privacy & Legal', privacyPolicy:'Privacy Policy', terms:'Terms of Use', adPrivacy:'Ad privacy choices',
+    rkWeek:'This week', rkAll:'All time', rkDaily:'Today', rkEmpty:'Nobody here yet. Be the first!', rkLogin:'Sign in from Settings → Account to join the ranking.',
+    rkOffline:'Could not load the ranking. Check your internet connection.', loading:'Loading…', synced:'Cloud save synced ☁️',
+    ach:{first:['First Pop','Pop your first line'],multi2:['Double Pop','Pop 2 lines in one move'],multi3:['Triple Show','Pop 3 lines in one move'],
+      combo3:['Combo Pro','Reach a x3 combo'],combo6:['Chain Reaction','Reach a x6 combo'],clean:['Spotless','Clear the whole board'],
+      s1k:['Warm-up','Score 1,000 in one game'],s5k:['Block Master','Score 5,000 in one game'],s10k:['Legend','Score 10,000 in one game'],
+      g10:['Regular','Play 10 games'],l500:['Line Hunter','Pop 500 lines in total'],daily:['Star of the Day','Reach the Daily Puzzle goal'],
+      str3:['On Fire','Daily goal 3 days in a row'],str7:['Week Streak','Daily goal 7 days in a row']},
     praise:['Nice!','Great!','Super!','Amazing!','Incredible!','Legendary!'],
     months:['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'],
   }
@@ -37,9 +71,26 @@ const store = (() => {
   d.settings = Object.assign({ sound: true, haptic: true, lang: lang0, theme: 'candy', seenHow: false }, d.settings);
   d.best = d.best || 0;
   d.daily = d.daily || {};
+  d.stats = Object.assign({ games: 0, lines: 0, bestCombo: 0, total: 0, pieces: 0, clears: 0, bestStreak: 0 }, d.stats);
+  d.ach = d.ach || {};
+  d.streak = d.streak || { count: 0, last: '' };
   return d;
 })();
-function persist() { try { localStorage.setItem(KEY, JSON.stringify(store)); } catch (e) {} }
+const BKS = window.BKS || null;
+function persist() { try { localStorage.setItem(KEY, JSON.stringify(store)); } catch (e) {} cloudPush(); }
+function cloudData() { return { v: 1, best: store.best, daily: store.daily, stats: store.stats, ach: store.ach, streak: store.streak }; }
+function cloudPush() { if (BKS && BKS.account.user) BKS.account.push(cloudData()); }
+function cloudMerge(r) {
+  if (!r || typeof r !== 'object') return;
+  store.best = Math.max(store.best, +r.best || 0);
+  for (const [k, v] of Object.entries(r.daily || {})) {
+    const l = store.daily[k] || {};
+    store.daily[k] = { best: Math.max(l.best || 0, v.best || 0), done: !!(l.done || v.done) };
+  }
+  for (const k of Object.keys(store.stats)) store.stats[k] = Math.max(store.stats[k] || 0, (r.stats || {})[k] || 0);
+  for (const [k, v] of Object.entries(r.ach || {})) store.ach[k] = store.ach[k] ? Math.min(store.ach[k], v) : v;
+  if (r.streak && (r.streak.last || '') > (store.streak.last || '')) store.streak = r.streak;
+}
 const S = store.settings;
 const t = k => STR[S.lang][k] ?? STR.en[k];
 
@@ -187,7 +238,8 @@ function fillTray() {
 function newGame(mode = 'classic') {
   const today = dayKey();
   rnd = mode === 'daily' ? mulberry32(hash(today)) : Math.random;
-  G = { board: newBoard(), tray: [], score: 0, shown: 0, combo: 0, miss: 0, mode, date: today, goal: 0, goalHit: false, rescued: false, over: false };
+  G = { board: newBoard(), tray: [], score: 0, shown: 0, combo: 0, miss: 0, mode, date: today, goal: 0, goalHit: false, rescued: false, over: false,
+    undos: 0, prev: null, started: Date.now() };
   if (mode === 'daily') {
     // Symmetric starter pattern, never a full line.
     for (let i = 0; i < 7; i++) {
@@ -203,18 +255,19 @@ function save() {
   if (!G) return;
   if (G.over) { delete store.save; } else {
     store.save = { board: G.board, tray: G.tray.map(p => p && { i: SHAPES.indexOf(p.shape), c: p.color }), score: G.score, combo: G.combo, miss: G.miss,
-      mode: G.mode, date: G.date, goal: G.goal, goalHit: G.goalHit, rescued: G.rescued };
+      mode: G.mode, date: G.date, goal: G.goal, goalHit: G.goalHit, rescued: G.rescued, undos: G.undos, secs: Math.round((Date.now() - G.started) / 1000) };
   }
   persist();
 }
 function load() {
   const s = store.save; if (!s) return false;
   if (s.mode === 'daily' && s.date !== dayKey()) { delete store.save; return false; }
-  G = Object.assign({}, s, { shown: s.score, over: false, tray: s.tray.map(p => p && { shape: SHAPES[p.i], color: p.c }) });
+  G = Object.assign({}, s, { shown: s.score, over: false, prev: null, undos: s.undos || 0, started: Date.now() - (s.secs || 0) * 1000,
+    tray: s.tray.map(p => p && { shape: SHAPES[p.i], color: p.c }) });
   rnd = s.mode === 'daily' ? mulberry32(hash(s.date) ^ s.score) : Math.random;
   return true;
 }
-function dayKey() { const d = new Date(); return `${d.getFullYear()}-${d.getMonth() + 1}-${d.getDate()}`; }
+function dayKey(off = 0) { const d = new Date(); d.setDate(d.getDate() + off); return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`; }
 function hash(str) { let h = 2166136261; for (const ch of str) { h ^= ch.charCodeAt(0); h = Math.imul(h, 16777619); } return h >>> 0; }
 
 // ---------- layout & sprites ----------
@@ -318,6 +371,8 @@ function drop() {
   const d = drag; drag = null;
   if (!d.ok) { sfx.bad(); return; }
   const sh = d.piece.shape;
+  G.prev = { board: G.board.map(r => r.slice()), tray: G.tray.slice(), score: G.score, combo: G.combo, miss: G.miss, goalHit: G.goalHit };
+  store.stats.pieces++;
   for (const [x, y] of sh.cells) G.board[d.gy + y][d.gx + x] = d.piece.color;
   G.tray[d.i] = null;
   G.placedAt = performance.now(); G.placedCells = sh.cells.map(([x, y]) => [d.gx + x, d.gy + y]);
@@ -341,7 +396,10 @@ function drop() {
       clearing.push({ x, y, c: G.board[y][x], t0: now + (k++) * 14 });
       G.board[y][x] = -1;
     }
-    if (G.board.every(r => r.every(v => v < 0))) { pts += 300; setTimeout(() => toast(t('allClear') + ' +300'), 250); }
+    if (G.board.every(r => r.every(v => v < 0))) { pts += 300; store.stats.clears++; unlock('clean'); setTimeout(() => toast(t('allClear') + ' +300'), 250); }
+    store.stats.lines += n; store.stats.bestCombo = Math.max(store.stats.bestCombo, G.combo);
+    unlock('first'); if (n >= 2) unlock('multi2'); if (n >= 3) unlock('multi3');
+    if (G.combo >= 3) unlock('combo3'); if (G.combo >= 6) unlock('combo6'); if (store.stats.lines >= 500) unlock('l500');
     gained += pts;
     floats.push({ x: bx + (d.gx + sh.pw / 2) * cell, y: by + (d.gy + sh.ph / 2) * cell, text: '+' + pts, life: 1 });
     sfx.clear(n, G.combo - 1); haptic(n >= 2 ? 'heavy' : 'medium');
@@ -355,8 +413,14 @@ function drop() {
   }
   G.score += gained;
   bumpScore();
+  if (G.score >= 1000) unlock('s1k'); if (G.score >= 5000) unlock('s5k'); if (G.score >= 10000) unlock('s10k');
+  updateUndo();
   if (G.mode === 'daily' && !G.goalHit && G.score >= G.goal) {
     G.goalHit = true; store.daily[G.date] = Object.assign(store.daily[G.date] || {}, { done: true });
+    const st = store.streak;
+    if (st.last !== G.date) { st.count = st.last === dayKey(-1) ? st.count + 1 : 1; st.last = G.date; }
+    store.stats.bestStreak = Math.max(store.stats.bestStreak, st.count);
+    unlock('daily'); if (st.count >= 3) unlock('str3'); if (st.count >= 7) unlock('str7');
     setTimeout(() => { toast(t('goalDone')); sfx.win(); haptic('heavy'); }, 500);
   }
   if (G.tray.every(p => !p)) fillTray();
@@ -381,12 +445,27 @@ function gameOver() {
     }
     $('finalScore').textContent = G.score;
     $('newBest').classList.toggle('show', isBest);
+    if (!G.counted) {
+      G.counted = true;
+      store.stats.games++; store.stats.total += G.score;
+      if (store.stats.games >= 10) unlock('g10');
+      if (BKS) { BKS.account.submitScore(G.mode, G.date, G.score); BKS.ads.noteGameOver((Date.now() - G.started) / 1000); }
+    } else if (BKS) BKS.account.submitScore(G.mode, G.date, G.score);
     $('btnRescue').style.display = G.rescued ? 'none' : '';
+    $('rescueLabel').textContent = BKS && BKS.ads.enabled ? t('rescueAd') : t('rescue');
     overlay('ovOver', true);
     save(); refreshMenu();
   }, 650);
 }
-function rescue() {
+async function rewardedGate() {
+  if (!BKS || !BKS.ads.enabled) return true;
+  const r = await BKS.ads.showRewarded();
+  if (r === 'skipped') { toast(t('adSkipped')); return false; }
+  if (r === 'unavailable') setTimeout(() => toast(t('adUnavailable')), 200);
+  return true;
+}
+async function rescue() {
+  if (!(await rewardedGate())) return;
   G.rescued = true; G.over = false;
   const set = [];
   for (let tries = 0; set.length < 3 && tries < 200; tries++) {
@@ -395,7 +474,59 @@ function rescue() {
   }
   while (set.length < 3) set.push(makePiece(SHAPES[0]));
   G.tray = set;
-  overlay('ovOver', false); save(); mascot('happy');
+  overlay('ovOver', false); save(); mascot('happy'); updateUndo();
+}
+
+// ---------- undo: 1 free per game, then up to 2 more via an optional rewarded ad ----------
+const FREE_UNDOS = 1, MAX_UNDOS = 3;
+function updateUndo() {
+  const b = $('btnUndo'); if (!b || !G) return;
+  b.disabled = !G.prev || G.over || G.undos >= MAX_UNDOS;
+  b.classList.toggle('ad', G.undos >= FREE_UNDOS && G.undos < MAX_UNDOS && !!(BKS && BKS.ads.enabled));
+}
+async function undo() {
+  if (!G || !G.prev || G.over || drag) return;
+  if (G.undos >= MAX_UNDOS) { toast(t('undoNone')); return; }
+  if (G.undos >= FREE_UNDOS && BKS && BKS.ads.enabled) {
+    if (!(await ask(t('undoAdQ'), t('watch')))) return;
+    if (!(await rewardedGate())) return;
+  }
+  const p = G.prev; G.prev = null; G.undos++;
+  G.board = p.board; G.tray = p.tray; G.score = p.score; G.shown = p.score; G.combo = p.combo; G.miss = p.miss; G.goalHit = p.goalHit;
+  $('score').textContent = G.score; clearing.length = 0; parts.length = 0;
+  sfx.pick(); haptic('light'); updateUndo(); updateModeTag(); save();
+}
+
+// ---------- achievements ----------
+const ACH = ['first', 'multi2', 'multi3', 'combo3', 'combo6', 'clean', 's1k', 's5k', 's10k', 'g10', 'l500', 'daily', 'str3', 'str7'];
+const ACH_ICON = { first: '💥', multi2: '✌️', multi3: '🎆', combo3: '🔥', combo6: '⚡', clean: '✨', s1k: '🥉', s5k: '🥈', s10k: '🥇', g10: '🎮', l500: '🎯', daily: '⭐', str3: '📅', str7: '🏆' };
+const achQueue = [];
+function unlock(id) {
+  if (store.ach[id]) return;
+  store.ach[id] = Date.now();
+  achQueue.push(id);
+  if (achQueue.length === 1) showAch();
+}
+function showAch() {
+  const id = achQueue[0]; if (!id) return;
+  const el = $('achToast');
+  el.querySelector('.ai').textContent = ACH_ICON[id];
+  el.querySelector('.at').textContent = t('badgeUnlocked');
+  el.querySelector('.an').textContent = t('ach')[id][0];
+  el.classList.remove('show'); void el.offsetWidth; el.classList.add('show');
+  sfx.win();
+  setTimeout(() => { achQueue.shift(); showAch(); }, 2600);
+}
+
+// ---------- in-page confirm (native dialogs are avoided) ----------
+function ask(text, yes, danger) {
+  return new Promise(res => {
+    $('askText').textContent = text; $('askYes').textContent = yes; $('askNo').textContent = t('cancel');
+    $('askYes').classList.toggle('danger', !!danger);
+    overlay('ovAsk', true);
+    $('askYes').onclick = () => { overlay('ovAsk', false); res(true); };
+    $('askNo').onclick = () => { overlay('ovAsk', false); res(false); };
+  });
 }
 
 // ---------- render ----------
@@ -504,7 +635,10 @@ function refreshMenu() {
   const hasSave = store.save && store.save.mode === 'classic';
   $('btnPlay').firstElementChild.textContent = hasSave ? t('cont') : t('play');
   const rec = store.daily[dayKey()];
-  $('dailyTag').textContent = fmtDay() + (rec?.done ? ' · ' + t('dailyDone') : '');
+  const st = store.streak, alive = st.count && (st.last === dayKey() || st.last === dayKey(-1));
+  $('dailyTag').textContent = fmtDay() + (rec?.done ? ' · ' + t('dailyDone') : '') + (alive ? ` · 🔥 ${st.count} ${t('streakDays')}` : '');
+  const got = ACH.filter(a => store.ach[a]).length;
+  $('trophyCount').textContent = `${got}/${ACH.length}`;
 }
 function updateModeTag() {
   const el = $('modeTag');
@@ -514,6 +648,7 @@ function updateModeTag() {
 function enterGame() {
   showScreen('game'); updateModeTag(); refreshMenu();
   $('score').textContent = G.shown = G.score;
+  updateUndo();
   if (!S.seenHow) { S.seenHow = true; persist(); overlay('ovHow', true); }
 }
 $('btnPlay').onclick = () => { audio(); if (!(store.save && store.save.mode === 'classic' && load())) newGame('classic'); enterGame(); };
@@ -522,12 +657,16 @@ $('btnPause').onclick = () => overlay('ovPause', true);
 $('btnResume').onclick = () => overlay('ovPause', false);
 $('btnRestart').onclick = () => { overlay('ovPause', false); newGame(G.mode); enterGame(); };
 const goHome = () => { overlay('ovPause', false); overlay('ovOver', false); save(); refreshMenu(); showScreen('menu'); };
-$('btnHome').onclick = goHome; $('btnHome2').onclick = goHome;
-$('btnAgain').onclick = () => { overlay('ovOver', false); newGame(G.mode); enterGame(); };
+$('btnHome').onclick = goHome;
+// Interstitials only ever appear here, between games, and only when the pacing rules in config.js allow it.
+async function betweenGames() { if (BKS) { try { await BKS.ads.maybeInterstitial(); } catch (e) {} } }
+$('btnAgain').onclick = async () => { overlay('ovOver', false); await betweenGames(); newGame(G.mode); enterGame(); };
+$('btnHome2').onclick = async () => { overlay('ovOver', false); await betweenGames(); goHome(); };
+$('btnUndo').onclick = undo;
 $('btnRescue').onclick = rescue;
 $('btnHow').onclick = () => overlay('ovHow', true);
 $('btnCloseHow').onclick = () => overlay('ovHow', false);
-$('btnSettings').onclick = () => { syncSettings(); overlay('ovSettings', true); };
+$('btnSettings').onclick = () => { syncSettings(); renderAccount(); overlay('ovSettings', true); };
 $('btnCloseSettings').onclick = () => overlay('ovSettings', false);
 function syncSettings() {
   $('optSound').checked = S.sound; $('optHaptic').checked = S.haptic;
@@ -541,8 +680,92 @@ $('optTheme').onclick = e => { const v = e.target.dataset.v; if (!v) return; S.t
 document.addEventListener('visibilitychange', () => { if (document.hidden) { save(); if (screens.game.classList.contains('active') && G && !G.over) overlay('ovPause', true); } });
 document.addEventListener('contextmenu', e => e.preventDefault());
 
+// ---------- trophies: badges, stats, world ranking ----------
+let trophyTab = 'badges', rankTab = 'week';
+$('btnTrophy').onclick = () => { overlay('ovTrophy', true); renderTrophy(); };
+$('btnCloseTrophy').onclick = () => overlay('ovTrophy', false);
+$('trophyTabs').onclick = e => { const v = e.target.dataset.v; if (!v) return; trophyTab = v; renderTrophy(); };
+const esc = s => String(s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+function renderTrophy() {
+  for (const b of $('trophyTabs').children) b.classList.toggle('on', b.dataset.v === trophyTab);
+  const box = $('trophyBody');
+  if (trophyTab === 'badges') {
+    box.innerHTML = '<div class="badges">' + ACH.map(id => {
+      const [name, desc] = t('ach')[id], on = !!store.ach[id];
+      return `<div class="badge ${on ? 'on' : ''}"><span class="bi">${on ? ACH_ICON[id] : '🔒'}</span><b>${esc(name)}</b><small>${esc(desc)}</small></div>`;
+    }).join('') + '</div>';
+  } else if (trophyTab === 'stats') {
+    const s = store.stats, avg = s.games ? Math.round(s.total / s.games) : 0;
+    const rows = [['stGames', s.games], ['stBest', store.best], ['stAvg', avg], ['stLines', s.lines], ['stCombo', 'x' + s.bestCombo], ['stPieces', s.pieces], ['stClears', s.clears], ['stStreak', s.bestStreak]];
+    box.innerHTML = '<dl class="stats">' + rows.map(([k, v]) => `<div><dt>${esc(t(k))}</dt><dd>${esc(v)}</dd></div>`).join('') + '</dl>';
+  } else renderRanks();
+}
+async function renderRanks() {
+  const box = $('trophyBody');
+  const seg = `<div class="seg wide" id="rankTabs">${['week', 'all', 'daily'].map(v => `<button data-v="${v}" class="${v === rankTab ? 'on' : ''}">${esc(t({ week: 'rkWeek', all: 'rkAll', daily: 'rkDaily' }[v]))}</button>`).join('')}</div>`;
+  box.innerHTML = seg + `<p class="muted">${esc(t('loading'))}</p>`;
+  $('rankTabs').onclick = e => { const v = e.target.dataset.v; if (!v) return; rankTab = v; renderRanks(); };
+  let rows = null;
+  try { rows = BKS ? await BKS.account.leaderboard(rankTab === 'daily' ? 'daily' : 'classic', rankTab === 'daily' ? dayKey() : null, rankTab === 'week' ? 'week' : 'all') : null; } catch (e) { rows = null; }
+  if (trophyTab !== 'ranks') return;
+  let html = seg;
+  if (!rows) html += `<p class="muted">${esc(t('rkOffline'))}</p>`;
+  else if (!rows.length) html += `<p class="muted">${esc(t('rkEmpty'))}</p>`;
+  else html += '<ol class="ranks">' + rows.map(r => `<li class="${r.is_me ? 'me' : ''}"><span class="rk">${r.rank <= 3 ? ['🥇', '🥈', '🥉'][r.rank - 1] : r.rank}</span><span class="nm">${esc(r.nickname)}</span><span class="sc">${esc(r.score)}</span></li>`).join('') + '</ol>';
+  if (!(BKS && BKS.account.user)) html += `<p class="muted small">${esc(t('rkLogin'))}</p>`;
+  box.innerHTML = html;
+  $('rankTabs').onclick = e => { const v = e.target.dataset.v; if (!v) return; rankTab = v; renderRanks(); };
+}
+
+// ---------- account (optional sign-in) ----------
+function renderAccount() {
+  const box = $('accBox'); if (!box) return;
+  const A = BKS && BKS.account;
+  if (!A || !A.available) { box.closest('.acc').hidden = true; return; }
+  box.closest('.acc').hidden = false;
+  if (A.user) {
+    box.innerHTML = `<label class="nick"><span>${esc(t('nickname'))}</span><input id="nickInput" maxlength="20" autocomplete="off" value="${esc(A.profile ? A.profile.nickname : '')}"></label>
+      <button class="btn small secondary" id="btnNick">${esc(t('save'))}</button>
+      <button class="btn small ghost" id="btnSignOut">${esc(t('signOut'))}</button>
+      <button class="linkbtn danger" id="btnDelete">${esc(t('deleteAcc'))}</button>`;
+    $('btnNick').onclick = async () => {
+      const v = $('nickInput').value.trim();
+      if (v.length < 3) { toast(t('nickShort')); return; }
+      try { await A.setNickname(v); toast(t('nickSaved')); } catch (e) { toast(t('signInFail')); }
+    };
+    $('btnSignOut').onclick = async () => { await A.signOut(); renderAccount(); };
+    $('btnDelete').onclick = async () => {
+      if (!(await ask(t('deleteConfirm'), t('deleteYes'), true))) return;
+      try { await A.deleteAccount(); toast(t('deleted')); } catch (e) { toast(t('signInFail')); }
+      renderAccount();
+    };
+  } else {
+    const pv = A.providers();
+    box.innerHTML = `<p class="muted small">${esc(t('signInWhy'))}</p>`
+      + (pv.apple ? `<button class="sso apple" id="btnApple"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M16.4 12.6c0-2.4 2-3.6 2.1-3.7-1.1-1.7-2.9-1.9-3.5-1.9-1.5-.2-2.9.9-3.7.9-.8 0-1.9-.9-3.2-.8-1.6 0-3.1 1-4 2.4-1.7 3-.4 7.4 1.2 9.8.8 1.2 1.8 2.5 3 2.4 1.2 0 1.7-.8 3.1-.8s1.9.8 3.2.8c1.3 0 2.1-1.2 2.9-2.4.9-1.3 1.3-2.7 1.3-2.8 0 0-2.4-1-2.4-3.9zM14 5.5c.7-.8 1.1-1.9 1-3-1 0-2.1.7-2.8 1.5-.6.7-1.2 1.8-1 2.9 1 .1 2.1-.6 2.8-1.4z"/></svg>${esc(t('signApple'))}</button>` : '')
+      + (pv.google ? `<button class="sso google" id="btnGoogle"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M23.5 12.3c0-.8-.1-1.6-.2-2.3H12v4.5h6.5c-.3 1.5-1.1 2.7-2.4 3.6v3h3.9c2.2-2.1 3.5-5.2 3.5-8.8z"/><path fill="#34A853" d="M12 24c3.2 0 6-1.1 8-2.9l-3.9-3c-1.1.7-2.5 1.2-4.1 1.2-3.1 0-5.8-2.1-6.7-5H1.3v3.1C3.3 21.3 7.4 24 12 24z"/><path fill="#FBBC05" d="M5.3 14.3c-.2-.7-.4-1.5-.4-2.3s.1-1.6.4-2.3V6.6H1.3C.5 8.2 0 10 0 12s.5 3.8 1.3 5.4l4-3.1z"/><path fill="#EA4335" d="M12 4.8c1.8 0 3.4.6 4.6 1.8l3.4-3.4C17.9 1.2 15.2 0 12 0 7.4 0 3.3 2.7 1.3 6.6l4 3.1c.9-2.8 3.6-4.9 6.7-4.9z"/></svg>${esc(t('signGoogle'))}</button>` : '');
+    const go = prov => async () => { try { await A.signIn(prov); } catch (e) { if (!/cancel/i.test(String(e && (e.message || e)))) toast(t('signInFail')); } };
+    if ($('btnApple')) $('btnApple').onclick = go('apple');
+    if ($('btnGoogle')) $('btnGoogle').onclick = go('google');
+  }
+  $('btnAdPrivacy').hidden = !(BKS && BKS.ads.privacyOptionsRequired);
+}
+const openLink = url => (BKS ? BKS.openUrl(url) : window.open(url, '_blank', 'noopener'));
+$('btnPrivacy').onclick = () => openLink((window.BLOKKO_CONFIG || {}).privacyUrl || 'privacy.html');
+$('btnTerms').onclick = () => openLink((window.BLOKKO_CONFIG || {}).termsUrl || 'terms.html');
+$('btnAdPrivacy').onclick = () => BKS && BKS.ads.showPrivacyOptions();
+let lastUid = null;
+if (BKS) BKS.account.onChange(async user => {
+  renderAccount();
+  const uid = user ? user.id : null;
+  if (uid && uid !== lastUid) {
+    try { const r = await BKS.account.pull(); cloudMerge(r); persist(); refreshMenu(); BKS.account.push(cloudData()); if (r) toast(t('synced')); } catch (e) {}
+  }
+  lastUid = uid;
+});
+
 applyTheme(); applyI18n();
-if ('serviceWorker' in navigator && location.protocol === 'https:' && !window.Capacitor) navigator.serviceWorker.register('sw.js').catch(() => {});
+if ('serviceWorker' in navigator && location.protocol === 'https:' && !(BKS && BKS.isNative)) navigator.serviceWorker.register('sw.js').catch(() => {});
 
 // test hook (used by automated checks only)
 window.__blokko = { get G() { return G; }, SHAPES, canPlace, newGame, drop: (i, gx, gy) => { drag = { i, piece: G.tray[i], gx, gy, ok: canPlace(G.board, G.tray[i].shape, gx, gy) }; drag.lines = drag.ok ? linesIf(G.tray[i].shape, gx, gy) : null; drop(); } };

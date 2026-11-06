@@ -19,6 +19,7 @@
 <!-- MENU -->
 <section id="menu" class="screen active">
   <div class="menu-top">
+    <button class="icon-btn wide" id="btnTrophy" aria-label="Ödüller">🏆 <small id="trophyCount">0/14</small></button>
     <button class="icon-btn" id="btnSettings" aria-label="Ayarlar">⚙️</button>
   </div>
   <img class="menu-logo" src="assets/logo.png" alt="Blokko">
@@ -33,7 +34,10 @@
 <!-- GAME -->
 <section id="game" class="screen">
   <header class="hud">
-    <button class="icon-btn" id="btnPause" aria-label="Duraklat">⏸</button>
+    <div class="hud-left">
+      <button class="icon-btn" id="btnPause" aria-label="Duraklat">⏸</button>
+      <button class="icon-btn undo" id="btnUndo" aria-label="Geri al" disabled>↶</button>
+    </div>
     <div class="score-box">
       <div class="score" id="score">0</div>
       <div class="best"><span>👑</span> <span id="best">0</span></div>
@@ -60,7 +64,7 @@
     <h2 id="overTitle" data-i18n="noMoves">Yer kalmadı!</h2>
     <div class="final"><span data-i18n="score">Puan</span><b id="finalScore">0</b></div>
     <div class="newbest" id="newBest" data-i18n="newBest">Yeni Rekor! 🎉</div>
-    <button class="btn gold" id="btnRescue">✨ <span data-i18n="rescue">Yeni Parçalar (1 kez)</span></button>
+    <button class="btn gold" id="btnRescue">✨ <span id="rescueLabel">Yeni Parçalar (1 kez)</span></button>
     <button class="btn primary" id="btnAgain" data-i18n="again">Tekrar Oyna</button>
     <button class="btn ghost" id="btnHome2" data-i18n="home">Ana Menü</button>
   </div>
@@ -81,9 +85,38 @@
         <button data-v="garden" class="th th-garden"></button>
         <button data-v="dream" class="th th-dream"></button>
       </div></div>
+    <section class="acc"><h3 data-i18n="account">Hesap</h3><div id="accBox"></div></section>
+    <section class="legal"><h3 data-i18n="legal">Gizlilik ve Yasal</h3>
+      <button class="linkbtn" id="btnPrivacy" data-i18n="privacyPolicy">Gizlilik Politikası</button>
+      <button class="linkbtn" id="btnTerms" data-i18n="terms">Kullanım Koşulları</button>
+      <button class="linkbtn" id="btnAdPrivacy" data-i18n="adPrivacy" hidden>Reklam gizlilik seçenekleri</button>
+    </section>
     <button class="btn primary" id="btnCloseSettings" data-i18n="ok">Tamam</button>
   </div>
 </div>
+
+<div id="ovTrophy" class="overlay">
+  <div class="card tall">
+    <h2 data-i18n="trophies">Ödüller</h2>
+    <div class="seg wide" id="trophyTabs">
+      <button data-v="badges" data-i18n="badges">Rozetler</button>
+      <button data-v="stats" data-i18n="stats">İstatistik</button>
+      <button data-v="ranks" data-i18n="ranks">Sıralama</button>
+    </div>
+    <div id="trophyBody" class="scroll"></div>
+    <button class="btn primary" id="btnCloseTrophy" data-i18n="ok">Tamam</button>
+  </div>
+</div>
+
+<div id="ovAsk" class="overlay top">
+  <div class="card">
+    <p id="askText" class="ask"></p>
+    <button class="btn primary" id="askYes">OK</button>
+    <button class="btn ghost" id="askNo">Vazgeç</button>
+  </div>
+</div>
+
+<div id="achToast" role="status"><span class="ai">🏅</span><span><small class="at"></small><b class="an"></b></span></div>
 
 <div id="ovHow" class="overlay">
   <div class="card">
@@ -100,6 +133,9 @@
 
 <div id="toast"></div>
 
+<script src="vendor/supabase.js"></script>
+<script src="config.js"></script>
+<script src="services.js"></script>
 <script src="game.js"></script>
 </body>
 </html>

@@ -4,4 +4,6 @@
     <string name="title_activity_main">Blokko</string>
     <string name="package_name">io.github.dagcann34.blokko</string>
     <string name="custom_url_scheme">io.github.dagcann34.blokko</string>
+    <!-- Google TEST app ID. Replace with your AdMob Android app ID before release. -->
+    <string name="admob_app_id">ca-app-pub-3940256099942544~3347511713</string>
 </resources>
