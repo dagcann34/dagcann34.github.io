@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+<meta name="theme-color" content="#7b3fe4">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="description" content="Blokko – renkli blok bulmaca oyunu. Blokları yerleştir, satır ve sütunları patlat! / Colorful block puzzle: place blocks, pop lines!">
+<title>Blokko</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="assets/favicon-64.png" type="image/png">
+<link rel="apple-touch-icon" href="assets/icon-180.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-theme="candy">
+<div id="bg"></div>
+
+<!-- MENU -->
+<section id="menu" class="screen active">
+  <div class="menu-top">
+    <button class="icon-btn" id="btnSettings" aria-label="Ayarlar">⚙️</button>
+  </div>
+  <img class="menu-logo" src="assets/logo.png" alt="Blokko">
+  <div class="mascot big" id="menuMascot"></div>
+  <div class="best-pill"><span data-i18n="best">En İyi</span> <b id="menuBest">0</b></div>
+  <button class="btn primary" id="btnPlay"><span data-i18n="play">Oyna</span></button>
+  <button class="btn secondary" id="btnDaily"><span data-i18n="daily">Günün Bulmacası</span> <small id="dailyTag"></small></button>
+  <button class="btn ghost" id="btnHow"><span data-i18n="how">Nasıl Oynanır?</span></button>
+  <p class="foot"><a href="privacy.html" data-i18n="privacy">Gizlilik</a></p>
+</section>
+
+<!-- GAME -->
+<section id="game" class="screen">
+  <header class="hud">
+    <button class="icon-btn" id="btnPause" aria-label="Duraklat">⏸</button>
+    <div class="score-box">
+      <div class="score" id="score">0</div>
+      <div class="best"><span>👑</span> <span id="best">0</span></div>
+    </div>
+    <div class="mascot small" id="gameMascot"></div>
+  </header>
+  <div id="modeTag" class="mode-tag"></div>
+  <canvas id="cv"></canvas>
+</section>
+
+<!-- OVERLAYS -->
+<div id="ovPause" class="overlay">
+  <div class="card">
+    <h2 data-i18n="paused">Duraklatıldı</h2>
+    <button class="btn primary" id="btnResume" data-i18n="resume">Devam Et</button>
+    <button class="btn secondary" id="btnRestart" data-i18n="restart">Yeniden Başla</button>
+    <button class="btn ghost" id="btnHome" data-i18n="home">Ana Menü</button>
+  </div>
+</div>
+
+<div id="ovOver" class="overlay">
+  <div class="card">
+    <div class="mascot big sad" id="overMascot"></div>
+    <h2 id="overTitle" data-i18n="noMoves">Yer kalmadı!</h2>
+    <div class="final"><span data-i18n="score">Puan</span><b id="finalScore">0</b></div>
+    <div class="newbest" id="newBest" data-i18n="newBest">Yeni Rekor! 🎉</div>
+    <button class="btn gold" id="btnRescue">✨ <span data-i18n="rescue">Yeni Parçalar (1 kez)</span></button>
+    <button class="btn primary" id="btnAgain" data-i18n="again">Tekrar Oyna</button>
+    <button class="btn ghost" id="btnHome2" data-i18n="home">Ana Menü</button>
+  </div>
+</div>
+
+<div id="ovSettings" class="overlay">
+  <div class="card">
+    <h2 data-i18n="settings">Ayarlar</h2>
+    <label class="row"><span data-i18n="sound">Ses</span><input type="checkbox" id="optSound" class="tog"></label>
+    <label class="row"><span data-i18n="haptics">Titreşim</span><input type="checkbox" id="optHaptic" class="tog"></label>
+    <div class="row"><span data-i18n="language">Dil</span>
+      <div class="seg" id="optLang"><button data-v="tr">TR</button><button data-v="en">EN</button></div></div>
+    <div class="row col"><span data-i18n="theme">Tema</span>
+      <div class="themes" id="optTheme">
+        <button data-v="candy" class="th th-candy"></button>
+        <button data-v="ocean" class="th th-ocean"></button>
+        <button data-v="night" class="th th-night"></button>
+        <button data-v="garden" class="th th-garden"></button>
+        <button data-v="dream" class="th th-dream"></button>
+      </div></div>
+    <button class="btn primary" id="btnCloseSettings" data-i18n="ok">Tamam</button>
+  </div>
+</div>
+
+<div id="ovHow" class="overlay">
+  <div class="card">
+    <h2 data-i18n="how">Nasıl Oynanır?</h2>
+    <ol class="how">
+      <li data-i18n="how1">Alttaki parçaları sürükleyip tahtaya bırak.</li>
+      <li data-i18n="how2">Bir satırı ya da sütunu tamamen doldur: patlasın!</li>
+      <li data-i18n="how3">Art arda patlatarak kombo yap, puanı katla.</li>
+      <li data-i18n="how4">Hiçbir parça sığmazsa oyun biter. Acele yok, süre yok!</li>
+    </ol>
+    <button class="btn primary" id="btnCloseHow" data-i18n="gotIt">Anladım!</button>
+  </div>
+</div>
+
+<div id="toast"></div>
+
+<script src="game.js"></script>
+</body>
+</html>

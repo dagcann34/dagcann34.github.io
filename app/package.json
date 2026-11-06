@@ -1,0 +1,25 @@
+{
+  "name": "blokko-app",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Blokko – native iOS/Android wrapper (Capacitor) around the web game in ../blokko",
+  "scripts": {
+    "copy-web": "node scripts/copy-web.mjs",
+    "assets": "capacitor-assets generate --assetPath ../blokko/resources --iconBackgroundColor '#ff6fb5' --splashBackgroundColor '#ff6fb5' --splashBackgroundColorDark '#2b1055'",
+    "sync": "npm run copy-web && cap sync",
+    "ios": "npm run sync && cap open ios",
+    "android": "npm run sync && cap open android"
+  },
+  "dependencies": {
+    "@capacitor/android": "^8.6.0",
+    "@capacitor/core": "^8.6.0",
+    "@capacitor/haptics": "^8.0.2",
+    "@capacitor/ios": "^8.6.0",
+    "@capacitor/splash-screen": "^8.0.2",
+    "@capacitor/status-bar": "^8.0.4"
+  },
+  "devDependencies": {
+    "@capacitor/assets": "^4.0.0",
+    "@capacitor/cli": "^8.6.0"
+  }
+}

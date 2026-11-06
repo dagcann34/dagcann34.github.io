@@ -1,0 +1,12 @@
+{
+  "appId": "io.github.dagcann34.blokko",
+  "appName": "Blokko",
+  "webDir": "www",
+  "backgroundColor": "#ff6fb5",
+  "ios": { "contentInset": "never", "scrollEnabled": false },
+  "android": { "allowMixedContent": false },
+  "plugins": {
+    "SplashScreen": { "launchShowDuration": 1200, "backgroundColor": "#ff6fb5", "showSpinner": false, "launchAutoHide": true },
+    "StatusBar": { "overlaysWebView": true, "style": "LIGHT" }
+  }
+}
