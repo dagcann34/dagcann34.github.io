@@ -7,8 +7,8 @@ window.BLOKKO_CONFIG = {
   // Google Sign-In: create OAuth clients in Google Cloud Console (see app/YAYINLAMA-REHBERI.md).
   // Leave empty to hide the Google button.
   google: {
-    webClientId: '',   // "Web application" client ID (also used by Android)
-    iOSClientId: '',   // "iOS" client ID
+    webClientId: '623801010736-2g774hiv90o674raioncaoo3u38tlbqe.apps.googleusercontent.com',   // "Web application" client ID (also used by Android)
+    iOSClientId: '623801010736-ru7k8835on84n6aunpj2jlttgevki68d.apps.googleusercontent.com',   // "iOS" client ID
   },
   // Sign in with Apple works on iOS with no extra IDs. On Android/web it needs a Services ID.
   apple: {
@@ -17,14 +17,14 @@ window.BLOKKO_CONFIG = {
 
   // AdMob. testing:true uses Google's official test ads — switch to false only with your real IDs.
   admob: {
-    testing: true,
+    testing: false,
     ios: {
-      interstitial: 'ca-app-pub-3940256099942544/4411468910',
-      rewarded: 'ca-app-pub-3940256099942544/1712485313',
+      interstitial: 'ca-app-pub-1885654505012842/3382707112',
+      rewarded: 'ca-app-pub-1885654505012842/4695788782',
     },
     android: {
-      interstitial: 'ca-app-pub-3940256099942544/1033173712',
-      rewarded: 'ca-app-pub-3940256099942544/5224354917',
+      interstitial: 'ca-app-pub-1885654505012842/7939018894',
+      rewarded: 'ca-app-pub-1885654505012842/4701472307',
     },
     // Player-friendly pacing for interstitials.
     pacing: {

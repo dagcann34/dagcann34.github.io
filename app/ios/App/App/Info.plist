@@ -67,8 +67,7 @@
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<true/>
 	<key>GADApplicationIdentifier</key>
-	<!-- Google TEST app ID. Replace with your AdMob iOS app ID (ca-app-pub-1885654505012842~XXXXXXXXXX) before release. -->
-	<string>ca-app-pub-3940256099942544~1458002511</string>
+	<string>ca-app-pub-1885654505012842~9901828099</string>
 	<key>GADIsAdManagerApp</key>
 	<true/>
 	<key>NSUserTrackingUsageDescription</key>
@@ -263,8 +262,7 @@
 			<string>google-signin</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<!-- Replace with the REVERSED iOS client ID from Google Cloud (com.googleusercontent.apps.XXXX). -->
-				<string>com.googleusercontent.apps.REPLACE-WITH-IOS-CLIENT-ID</string>
+				<string>com.googleusercontent.apps.623801010736-ru7k8835on84n6aunpj2jlttgevki68d</string>
 			</array>
 		</dict>
 	</array>
