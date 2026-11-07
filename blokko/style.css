@@ -157,3 +157,9 @@ body{font-family:"Baloo 2",ui-rounded,"SF Pro Rounded",system-ui,sans-serif;colo
 #achToast.show{animation:achIn 2.5s cubic-bezier(.2,1.4,.4,1)}
 @keyframes achIn{0%{transform:translate(-50%,-160%)}12%,85%{transform:translate(-50%,0)}100%{transform:translate(-50%,-160%)}}
 @media (prefers-reduced-motion:reduce){.menu-logo,.mascot.big{animation:none}#achToast.show{animation:none;transform:translate(-50%,0)}}
+/* tablets: use the extra room for a bigger board */
+@media (min-width:700px) and (min-height:700px){
+  .hud,#cv{max-width:min(820px,calc((100dvh - 140px) * 0.68))}
+  .score{font-size:64px}
+  .card{width:min(92vw,440px)}
+}
