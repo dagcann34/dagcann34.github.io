@@ -121,9 +121,10 @@ npm run sync      # oyunu kopyalar, eklentileri iOS/Android'e bağlar
 ---
 
 ## 6. Yayın öncesi kontrol listesi
-- [ ] `config.js` → `admob.testing: false` ve gerçek reklam birimi kimlikleri
-- [ ] `Info.plist` → gerçek `GADApplicationIdentifier` ve Google URL scheme
-- [ ] `strings.xml` → gerçek `admob_app_id`
+- [x] `config.js` → `admob.testing: false` ve gerçek reklam birimi kimlikleri
+- [ ] Kendi telefonlarınızı test cihazı yapın: `config.js` → `admob.testDevices` (veya AdMob → Ayarlar → Test cihazları). **Kendi gerçek reklamlarınıza asla dokunmayın.** GitHub'daki debug APK her zaman test reklamı gösterir.
+- [x] `Info.plist` → gerçek `GADApplicationIdentifier` ve Google URL scheme
+- [x] `strings.xml` → gerçek `admob_app_id`
 - [ ] Supabase'de Apple ve Google sağlayıcıları açık
 - [ ] Gerçek cihazda: giriş → bulut eşitleme → sıralama → çıkış → yeniden giriş → hesap silme
 - [ ] AB VPN'i ile reklam onay ekranı görünüyor mu?

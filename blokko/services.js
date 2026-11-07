@@ -38,7 +38,7 @@ const ads = (() => {
         if (s === 'notDetermined') { await A.requestTrackingAuthorization(); s = (await A.trackingAuthorizationStatus()).status; }
         npa = s !== 'authorized';
       }
-      await A.initialize({ initializeForTesting: !!C.admob.testing, maxAdContentRating: 'General', tagForChildDirectedTreatment: false, tagForUnderAgeOfConsent: false });
+      await A.initialize({ initializeForTesting: !!C.admob.testing, testingDevices: C.admob.testDevices || [], maxAdContentRating: 'General', tagForChildDirectedTreatment: false, tagForUnderAgeOfConsent: false });
       ready = canRequest;
       A.addListener('interstitialAdDismissed', () => { intLoaded = false; preloadInterstitial(); });
       A.addListener('interstitialAdFailedToShow', () => { intLoaded = false; preloadInterstitial(); });

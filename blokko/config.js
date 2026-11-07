@@ -18,6 +18,9 @@ window.BLOKKO_CONFIG = {
   // AdMob. testing:true uses Google's official test ads — switch to false only with your real IDs.
   admob: {
     testing: false,
+    // Your own phones: they always get test ads, so you never click your own real ads (AdMob policy).
+    // The ID is printed in Xcode / Logcat the first time an ad loads ("To get test ads on this device...").
+    testDevices: [],
     ios: {
       interstitial: 'ca-app-pub-1885654505012842/3382707112',
       rewarded: 'ca-app-pub-1885654505012842/4695788782',

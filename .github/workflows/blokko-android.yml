@@ -24,6 +24,10 @@ jobs:
           java-version: 21
       - run: npm ci
       - run: npm run sync
+      - name: Force Google test ads in this debug APK (never serve real ads to testers)
+        run: |
+          sed -i 's/testing: false/testing: true/' android/app/src/main/assets/public/config.js
+          grep -q "testing: true" android/app/src/main/assets/public/config.js
       - name: Build debug APK (install on a phone to test)
         working-directory: app/android
         run: ./gradlew assembleDebug --no-daemon
